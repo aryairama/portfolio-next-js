@@ -6,16 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "production": "npm run build && npm run start"
   },
   "dependencies": {
+    "axios": "^0.23.0",
+    "moment": "^2.29.1",
     "next": "11.1.2",
+    "next-redux-cookie-wrapper": "^2.1.0",
+    "next-redux-wrapper": "^7.0.5",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.5",
+    "react-toastify": "^8.0.3",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "simple-react-validator": "^1.6.1",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",
-    "eslint": "8.0.0",
+    "eslint": "^8.0.0",
     "eslint-config-next": "11.1.2",
     "postcss": "^8.3.9",
     "tailwindcss": "^2.2.16"
