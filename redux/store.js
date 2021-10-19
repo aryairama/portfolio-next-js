@@ -17,7 +17,7 @@ export const store = wrapMakeStore(() =>
     rootReducer,
     bindMiddleware([
       nextReduxCookieMiddleware({
-        subtrees: [{ subtree: 'userLogin', cookieName: 'AuthMyPortfolio' }],
+        subtrees: [{ subtree: 'userLogin', cookieName: 'MyPortfolio' }],
         secure: true,
         sameSite: 'none',
       }),
