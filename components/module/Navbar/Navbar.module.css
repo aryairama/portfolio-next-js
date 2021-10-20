@@ -1,0 +1,100 @@
+.navbar {
+  @apply bg-transparent fixed w-full top-0 z-50;
+}
+
+.navbar-scroll {
+  @apply bg-[#252934] shadow-md transition-all duration-500;
+}
+
+.navbar-container {
+  @apply flex flex-wrap justify-between content-center items-center py-5;
+}
+
+.navbar-menu-right {
+  transition: opacity 400ms, height 400ms ease-in-out;
+  @apply w-full opacity-0 h-0 block;
+}
+
+.navbar-menu {
+  transition: margin-top 400ms ease-in-out;
+  @apply block flex-row flex-wrap items-center -mt-96;
+}
+
+.navbar.show-navbar {
+  @apply bg-[#252934];
+}
+
+.navbar-menu-right.show-navbar {
+  transition: opacity 400ms, height 400ms ease-in-out;
+  @apply opacity-100 h-full border-t border-white mt-2;
+}
+
+.navbar-menu-right.show-navbar > .navbar-menu {
+  transition: margin-top 400ms ease-in-out;
+  @apply mt-0;
+}
+
+.navbar-button {
+  @apply block md:hidden pr-[30px];
+}
+
+.navbar-list-icon {
+  @apply w-6;
+  filter: invert(99%) sepia(99%) saturate(2%) hue-rotate(180deg) brightness(105%) contrast(100%);
+}
+
+.li-menu {
+  @apply cursor-pointer relative;
+}
+
+.li-menu::after {
+  content: '';
+  @apply h-[2px] w-0 bg-white block transition-all duration-300 absolute;
+}
+
+.li-menu:hover::after {
+  content: '';
+  @apply w-full;
+}
+
+.li-menu-a {
+  @apply text-[20px] font-semibold text-white px-5 py-2;
+}
+
+@screen md {
+  .li-menu {
+    @apply mx-2;
+  }
+
+  .navbar-menu-right.show-navbar {
+    @apply border-0 mt-0 transition-none flex;
+  }
+
+  .navbar.show-navbar {
+    @apply bg-transparent;
+  }
+
+  .navbar-menu {
+    @apply flex mt-0;
+  }
+
+  .navbar-button {
+    @apply hidden;
+  }
+
+  .navbar-menu-left {
+    @apply w-1/4;
+  }
+
+  .navbar-container {
+    @apply container;
+  }
+
+  .navbar-menu-right {
+    @apply opacity-100 h-auto flex flex-row flex-wrap justify-center transition-none;
+  }
+}
+
+.text-brand {
+  @apply text-white font-bold;
+}

@@ -1,0 +1,84 @@
+.header-container {
+  /* @apply relative flex justify-center items-center min-h-screen w-full bg-[#252934] pt-[86px] pb-12; */
+  @apply relative min-h-screen w-full bg-[#252934] pt-[70px] pb-12;
+  /* background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%); */
+  /* background: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
+  /* background: linear-gradient(89deg, rgb(21, 74, 189) 0.1%, rgb(26, 138, 211) 51.5%, rgb(72, 177, 234) 100.2%); */
+}
+
+.header-particles {
+  @apply absolute top-0 left-0 right-0 bottom-0 h-full w-full z-30;
+}
+
+.header-content {
+  @apply relative container grid grid-cols-1 gap-4 text-white z-40;
+}
+
+.header-content-left {
+  @apply col-span-1 order-2 place-self-center;
+}
+
+.header-content-right {
+  @apply col-span-1 order-1 place-self-center;
+}
+
+.header-content-name {
+  @apply font-bold text-4xl;
+}
+
+.header-content-job {
+  @apply font-semibold text-2xl mt-4;
+}
+
+.header-content-avatar-container {
+  @apply w-64 h-64 rounded-full bg-gray-600 flex justify-center items-center;
+}
+
+.header-content-avatar {
+  @apply w-60 h-60 rounded-full bg-gray-500 object-cover relative transition-all duration-300;
+}
+
+.header-content-avatar-container:hover > .header-content-avatar {
+  @apply w-64 h-64 transition-all duration-300;
+}
+
+.header-content-text-contact {
+  @apply mt-7;
+}
+
+@screen md {
+  .header-container {
+    @apply pt-[150px];
+  }
+  .header-content {
+    @apply grid-cols-12 gap-6;
+  }
+
+  .header-content-left {
+    @apply col-span-8 order-1 place-self-start;
+  }
+
+  .header-content-right {
+    @apply col-span-4 order-2 place-self-start;
+  }
+
+  .header-content-name {
+    @apply text-5xl;
+  }
+
+  .header-content-job {
+    @apply text-3xl;
+  }
+
+  .header-content-avatar-container {
+    @apply w-[19rem] h-[19rem];
+  }
+
+  .header-content-avatar-container:hover > .header-content-avatar {
+    @apply w-[19rem] h-[19rem] transition-all duration-300;
+  }
+
+  .header-content-avatar {
+    @apply w-72 h-72;
+  }
+}

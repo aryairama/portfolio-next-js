@@ -1,0 +1,11 @@
+.text-contact-container {
+  @apply flex flex-wrap w-full items-center cursor-pointer transition-all duration-300 mb-3;
+}
+
+.text-contact-container:hover {
+  @apply ml-4 transition-all duration-300;
+}
+
+.text-contact-icon {
+  @apply mr-2 object-contain h-6 w-6;
+}
