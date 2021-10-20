@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { TextIconContact } from '../../base';
 
-const Header = ({ name, job, avatar }) => {
+const Header = ({ name, job, avatar, phoneNumber, email, address }) => {
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 200 });
   }, []);
@@ -50,14 +50,14 @@ const Header = ({ name, job, avatar }) => {
           <div className={style['header-content-name']}>{name}</div>
           <div className={style['header-content-job']}>{job}</div>
           <div className={style['header-content-text-contact']}>
-            <TextIconContact icon="/assets/icons/whatsapp.svg" url="https://wa.link/e85y2f">
-              +6285334016482
+            <TextIconContact icon="/assets/icons/whatsapp.svg" url={phoneNumber.url}>
+              {phoneNumber.text}
             </TextIconContact>
-            <TextIconContact icon="/assets/icons/email.svg" url="mailto:aryairama987@gmail.com">
-              aryairama987@gmail.com
+            <TextIconContact icon="/assets/icons/email.svg" url={email.url}>
+              {email.text}
             </TextIconContact>
-            <TextIconContact icon="/assets/icons/address.svg" url="https://goo.gl/maps/25zim3tHTXvkvcTo7">
-              Trenggalek, Jawa Timur, Indonesia
+            <TextIconContact icon="/assets/icons/address.svg" url={address.url}>
+              {address.text}
             </TextIconContact>
           </div>
         </div>
@@ -75,6 +75,18 @@ Header.propTypes = {
   name: PropTypes.string.isRequired,
   job: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
+  phoneNumber: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
+  email: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
+  address: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Header;

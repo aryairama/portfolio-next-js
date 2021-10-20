@@ -1,8 +1,9 @@
 import { LayoutPrimary } from '../components/module';
+import PropTypes from 'prop-types';
 
-const HomeView = (props) => {
+const HomeView = ({ name, job, avatar, phoneNumber, email, address, ...props }) => {
   return (
-    <LayoutPrimary name="Arya Irama Wahono" job="Fullstack Web Developer" avatar="/assets/profile/cv5_compress.jpg">
+    <LayoutPrimary name={name} job={job} avatar={avatar} phoneNumber={phoneNumber} email={email} address={address}>
       <section id="about" className="container">
         <div className="min-h-screen w-full flex justify-center items-center">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, veniam? Sit maiores quaerat repellendus
@@ -12,6 +13,24 @@ const HomeView = (props) => {
       </section>
     </LayoutPrimary>
   );
+};
+
+HomeView.propTypes = {
+  name: PropTypes.string.isRequired,
+  job: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  phoneNumber: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
+  email: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
+  address: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default HomeView;
