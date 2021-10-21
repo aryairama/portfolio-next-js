@@ -55,13 +55,35 @@
   }
 
   .header-content-left {
-    @apply col-span-8 order-1 place-self-start;
+    @apply col-span-7 order-1 place-self-start;
   }
 
   .header-content-right {
-    @apply col-span-4 order-2 place-self-start;
+    @apply col-span-5 order-2 place-self-start;
   }
 
+  .header-content-name {
+    @apply text-[40px] leading-9;
+  }
+
+  .header-content-job {
+    @apply text-[24px] leading-10;
+  }
+
+  .header-content-avatar-container {
+    @apply w-[18rem] h-[18rem];
+  }
+
+  .header-content-avatar-container:hover > .header-content-avatar {
+    @apply w-[18rem] h-[18rem];
+  }
+
+  .header-content-avatar {
+    @apply w-[17rem] h-[17rem];
+  }
+}
+
+@screen lg {
   .header-content-name {
     @apply text-5xl;
   }
@@ -70,12 +92,20 @@
     @apply text-3xl;
   }
 
+  .header-content-left {
+    @apply col-span-8;
+  }
+
+  .header-content-right {
+    @apply col-span-4;
+  }
+
   .header-content-avatar-container {
     @apply w-[19rem] h-[19rem];
   }
 
   .header-content-avatar-container:hover > .header-content-avatar {
-    @apply w-[19rem] h-[19rem] transition-all duration-300;
+    @apply w-[19rem] h-[19rem];
   }
 
   .header-content-avatar {

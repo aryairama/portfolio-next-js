@@ -15,6 +15,7 @@ const LayoutPrimary = (props) => {
           phoneNumber={props.phoneNumber}
           email={props.email}
           address={props.address}
+          contacts={props.contacts}
         />
       </section>
       {props.children}
@@ -38,6 +39,7 @@ LayoutPrimary.propTypes = {
     url: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
   }).isRequired,
+  contacts: PropTypes.array.isRequired,
 };
 
 export default LayoutPrimary;

@@ -4,9 +4,9 @@ import Particles from 'react-tsparticles';
 import Aos from 'aos';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { TextIconContact } from '../../base';
+import { TextIconContact, ListIconContactContainer, ListIconContact } from '../../base';
 
-const Header = ({ name, job, avatar, phoneNumber, email, address }) => {
+const Header = ({ name, job, avatar, phoneNumber, email, address, contacts }) => {
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 200 });
   }, []);
@@ -60,6 +60,11 @@ const Header = ({ name, job, avatar, phoneNumber, email, address }) => {
               {address.text}
             </TextIconContact>
           </div>
+          <ListIconContactContainer className="-ml-1">
+            {contacts?.map((contact, index) => (
+              <ListIconContact key={index} iconClassName={contact.icon_class_name} url={contact.url} />
+            ))}
+          </ListIconContactContainer>
         </div>
         <div data-aos="fade-left" className={style['header-content-right']}>
           <div className={style['header-content-avatar-container']}>
