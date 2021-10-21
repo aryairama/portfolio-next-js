@@ -1,7 +1,7 @@
-import { LayoutPrimary } from '../components/module';
+import { LayoutPrimary, About } from '../components/module';
 import PropTypes from 'prop-types';
 
-const HomeView = ({ name, job, avatar, phoneNumber, email, address, contacts, ...props }) => {
+const HomeView = ({ name, job, avatar, phoneNumber, email, address, contacts, about, ...props }) => {
   return (
     <LayoutPrimary
       name={name}
@@ -13,11 +13,7 @@ const HomeView = ({ name, job, avatar, phoneNumber, email, address, contacts, ..
       contacts={contacts}
     >
       <section id="about" className="container">
-        <div className="min-h-screen w-full flex justify-center items-center">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, veniam? Sit maiores quaerat repellendus
-          fuga saepe facilis, numquam, voluptatem voluptatum autem dolorum tenetur ipsam? Atque aut magnam ratione
-          numquam voluptatibus.
-        </div>
+        <About text={about} />
       </section>
     </LayoutPrimary>
   );
@@ -40,6 +36,7 @@ HomeView.propTypes = {
     text: PropTypes.string.isRequired,
   }).isRequired,
   contacts: PropTypes.array.isRequired,
+  about: PropTypes.string.isRequired,
 };
 
 export default HomeView;
