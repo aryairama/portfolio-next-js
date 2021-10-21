@@ -1,13 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Aos from 'aos';
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import style from './About.module.css';
 
 const About = ({ text, ...props }) => {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
   return (
     <div className={style['about-grid-layout']}>
       <div data-aos="zoom-in-right" className={style['about-left-content']}>

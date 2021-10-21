@@ -1,7 +1,16 @@
 import { LayoutPrimary, About } from '../components/module';
 import PropTypes from 'prop-types';
+import Aos from 'aos';
+import { useEffect } from 'react';
 
 const HomeView = ({ name, job, avatar, phoneNumber, email, address, contacts, about, ...props }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000, delay: 200 });
+    window.addEventListener('scroll', () => Aos.refresh());
+    return () => {
+      window.removeEventListener('scroll', () => Aos.refresh());
+    };
+  }, []);
   return (
     <LayoutPrimary
       name={name}

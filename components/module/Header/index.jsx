@@ -1,15 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import style from './Header.module.css';
 import Particles from 'react-tsparticles';
-import Aos from 'aos';
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { TextIconContact, ListIconContactContainer, ListIconContact } from '../../base';
 
 const Header = ({ name, job, avatar, phoneNumber, email, address, contacts }) => {
-  useEffect(() => {
-    Aos.init({ duration: 1000, delay: 200 });
-  }, []);
   return (
     <div className={style['header-container']}>
       <Particles
