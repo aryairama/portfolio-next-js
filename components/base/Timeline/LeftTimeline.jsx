@@ -8,7 +8,7 @@ const LeftTimeline = ({ startDate, endDate, position, institution, description, 
       <div className={style['timeline-left-layout']}>
         <h3 className={style['timeline-content-header']}>{position ? `${position} - ${institution}` : institution}</h3>
         <p className={style['timeline-content-date']}>
-          {moment(startDate).format('MM-YYYY')} - {moment(endDate).format('MM-YYYY')}{' '}
+          {moment(startDate).format('MMMM-YYYY')} - {moment(endDate).format('MMMM-YYYY')}
         </p>
         <p className={style['timeline-content-description']}>{description}</p>
         <span className={style['timeline-content-type']}>{type}</span>

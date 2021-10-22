@@ -55,15 +55,15 @@
 }
 
 .timeline-content-header {
-  @apply font-semibold text-lg;
+  @apply font-semibold;
 }
 
 .timeline-content-description {
-  @apply text-justify mb-2;
+  @apply text-justify mb-2 text-sm;
 }
 
 .timeline-content-date {
-  @apply font-light text-sm mb-1;
+  @apply text-xs my-1;
 }
 
 .timeline-content-type {
