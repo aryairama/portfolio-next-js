@@ -2,7 +2,18 @@ import HomeView from '../views/HomeView';
 import Aos from 'aos';
 import { useEffect } from 'react';
 
-export default function Home({ name, job, avatar, phoneNumber, email, address, contacts, about, skills }) {
+export default function Home({
+  name,
+  job,
+  avatar,
+  phoneNumber,
+  email,
+  address,
+  contacts,
+  about,
+  skills,
+  educationAndExperience,
+}) {
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 200 });
     window.addEventListener('scroll', () => Aos.refresh());
@@ -21,6 +32,7 @@ export default function Home({ name, job, avatar, phoneNumber, email, address, c
       contacts={contacts}
       about={about}
       skills={skills}
+      educationAndExperience={educationAndExperience}
     />
   );
 }
@@ -126,6 +138,59 @@ export async function getServerSideProps(context) {
         {
           title: 'Git',
           icon_class_name: 'devicon-git-plain colored',
+        },
+      ],
+      educationAndExperience: [
+        {
+          institution: 'Arkademy Tech Academy',
+          startDate: '2021-06-23T17:00:00.000Z',
+          position: 'Fullstack Website Developer',
+          endDate: '2021-09-22T10:00:00.000Z',
+          description:
+            'Graduated from Bootcamp Arcademy for Full Stack Web Developer program using javascript language. Have expertise in JavaScript, React Js, Next Js, Express Js, Tailwind and MySQL. Experience working in a team as a project leader and has completed 5 SPA-based web site application projects',
+          type: 'education',
+        },
+        {
+          institution: 'District Education Office Branch Trenggalek',
+          position: 'Fullstack Website Developer',
+          description:
+            'Build the entire SIMBKK website belonging to the District Education Office Branch Trenggalek using Laravel 6 and Bootstrap 4. Input more than 1000 data alumni of Trenggalek Regency Vocational High School. The SIMBKK\napplication is used for data recording and tracking of all alumni of the Trenggalek Regency Vocational High School.',
+          startDate: '2020-11-10T17:00:00.000Z',
+          endDate: '2020-12-15T10:00:00.000Z',
+          type: 'experience',
+        },
+        {
+          institution: 'CV.Energeek',
+          position: 'IT Support',
+          description:
+            'Served as IT Support with several jobs, such as data entry on web applications developed by the company, recap of data management results from website or mobile applications in excel form, installation and assembling of company and client computers, and making personal BookStore applications as one of the results of work practices field in the company.',
+          startDate: '2020-01-14T17:00:00.000Z',
+          endDate: '2020-06-10T10:00:00.000Z',
+          type: 'experience',
+        },
+        {
+          institution: 'SMKN 2 Trenggalek',
+          startDate: '2018-07-16T17:00:00.000Z',
+          position: 'Software Engineering',
+          endDate: '2021-06-16T10:00:00.000Z',
+          description: '',
+          type: 'education',
+        },
+        {
+          institution: 'SMPN 1 POGALAN',
+          startDate: '2008-07-13T17:00:00.000Z',
+          position: '',
+          endDate: '2018-05-27T10:00:00.000Z',
+          description: '',
+          type: 'education',
+        },
+        {
+          institution: 'Madrasah Ibtidaiyah Nuruzh Zholam',
+          startDate: '2008-07-13T17:00:00.000Z',
+          position: '',
+          endDate: '2015-06-19T10:00:00.000Z',
+          description: '',
+          type: 'education',
         },
       ],
     },

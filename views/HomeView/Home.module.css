@@ -7,10 +7,11 @@
 }
 
 .skills-container {
-  @apply container py-20;
+  @apply container pt-20 pb-32;
 }
 
-.skills-header {
+.skills-header,
+.education-experience-header {
   @apply text-[32px] text-center font-bold text-[#252934];
 }
 
@@ -18,8 +19,13 @@
   @apply mt-5;
 }
 
+.education-experience-container {
+  @apply container py-20;
+}
+
 @screen md {
-  .skills-header {
+  .skills-header,
+  .education-experience-header {
     @apply text-4xl;
   }
 }

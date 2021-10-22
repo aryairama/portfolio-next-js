@@ -1,10 +1,23 @@
 import { LayoutPrimary, About, Carousel } from '../../components/module';
 import { configSkillsCarousel } from '../../configs/Carousel';
-import { CardSkill } from '../../components/base';
+import { CardSkill, TimelineContainer, LeftTimeline, RightTimeline } from '../../components/base';
 import PropTypes from 'prop-types';
 import style from './Home.module.css';
+import React from 'react';
 
-const HomeView = ({ name, job, avatar, phoneNumber, email, address, contacts, about, skills, ...props }) => {
+const HomeView = ({
+  name,
+  job,
+  avatar,
+  phoneNumber,
+  email,
+  address,
+  contacts,
+  about,
+  skills,
+  educationAndExperience,
+  ...props
+}) => {
   return (
     <LayoutPrimary
       name={name}
@@ -18,7 +31,7 @@ const HomeView = ({ name, job, avatar, phoneNumber, email, address, contacts, ab
       <section id="about" className={style['about-me-container']}>
         <About text={about} />
       </section>
-      <section data-aos="fade-up" data-aos-anchor-placement="center-bottom" id="skills" className={style['skills-bg']}>
+      <section data-aos="fade-up" id="skills" className={style['skills-bg']}>
         <div className={style['skills-container']}>
           <p className={style['skills-header']}>Skills</p>
           <Carousel className={style['carousel-skill']} config={configSkillsCarousel}>
@@ -27,6 +40,34 @@ const HomeView = ({ name, job, avatar, phoneNumber, email, address, contacts, ab
             ))}
           </Carousel>
         </div>
+      </section>
+      <section data-aos="fade-up" id="education_experience" className={style['education-experience-container']}>
+        <p className={style['education-experience-header']}>Education & Experience</p>
+        <TimelineContainer className="mt-7">
+          {educationAndExperience?.map((value, index) => (
+            <React.Fragment key={index}>
+              {value.type === 'education' ? (
+                <LeftTimeline
+                  startDate={value.startDate}
+                  endDate={value.endDate}
+                  position={value.position}
+                  institution={value.institution}
+                  description={value.description}
+                  type={value.type}
+                />
+              ) : (
+                <RightTimeline
+                  startDate={value.startDate}
+                  endDate={value.endDate}
+                  position={value.position}
+                  institution={value.institution}
+                  description={value.description}
+                  type={value.type}
+                />
+              )}
+            </React.Fragment>
+          ))}
+        </TimelineContainer>
       </section>
     </LayoutPrimary>
   );
@@ -51,6 +92,7 @@ HomeView.propTypes = {
   contacts: PropTypes.array.isRequired,
   about: PropTypes.string.isRequired,
   skills: PropTypes.array.isRequired,
+  educationAndExperience: PropTypes.array.isRequired,
 };
 
 export default HomeView;
