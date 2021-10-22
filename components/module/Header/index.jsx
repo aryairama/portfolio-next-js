@@ -2,44 +2,13 @@
 import style from './Header.module.css';
 import Particles from 'react-tsparticles';
 import PropTypes from 'prop-types';
+import { headerParticles } from '../../../configs/tsParticles';
 import { TextIconContact, ListIconContactContainer, ListIconContact } from '../../base';
 
 const Header = ({ name, job, avatar, phoneNumber, email, address, contacts }) => {
   return (
     <div className={style['header-container']}>
-      <Particles
-        options={{
-          fps_limit: 60,
-          interactivity: {
-            detectsOn: 'canvas',
-            events: {
-              onClick: { enable: true, mode: 'push' },
-              onHover: { enable: true, mode: 'repulse' },
-              resize: true,
-            },
-            modes: { push: { particles_nb: 4 }, repulse: { distance: 100, duration: 0.4 } },
-          },
-          particles: {
-            color: { value: '#ffffff' },
-            links: { color: '#ffffff', distance: 150, enable: true, opacity: 0.5, width: 1 },
-            move: {
-              bounce: false,
-              direction: 'none',
-              enable: true,
-              outMode: 'bounce',
-              random: false,
-              speed: 2,
-              straight: false,
-            },
-            number: { density: { enable: true, area: 800 }, value: 80 },
-            opacity: { value: 0.5 },
-            shape: { type: 'circle' },
-            size: { random: true, value: 5 },
-          },
-          detectRetina: true,
-        }}
-        className={style['header-particles']}
-      />
+      <Particles options={headerParticles} className={style['header-particles']} />
       <div className={style['header-content']}>
         <div data-aos="fade-right" className={style['header-content-left']}>
           <div className={style['header-content-name']}>{name}</div>

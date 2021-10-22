@@ -1,6 +1,15 @@
 import HomeView from '../views/HomeView';
+import Aos from 'aos';
+import { useEffect } from 'react';
 
-export default function Home({ name, job, avatar, phoneNumber, email, address, contacts, about }) {
+export default function Home({ name, job, avatar, phoneNumber, email, address, contacts, about, skills }) {
+  useEffect(() => {
+    Aos.init({ duration: 1000, delay: 200 });
+    window.addEventListener('scroll', () => Aos.refresh());
+    return () => {
+      window.removeEventListener('scroll', () => Aos.refresh());
+    };
+  }, []);
   return (
     <HomeView
       name={name}
@@ -11,6 +20,7 @@ export default function Home({ name, job, avatar, phoneNumber, email, address, c
       address={address}
       contacts={contacts}
       about={about}
+      skills={skills}
     />
   );
 }
@@ -50,6 +60,72 @@ export async function getServerSideProps(context) {
         {
           url: 'https://www.twitch.tv/ax404',
           icon_class_name: 'fab fa-twitch',
+        },
+      ],
+      skills: [
+        {
+          title: 'Node Js',
+          icon_class_name: 'devicon-nodejs-plain colored',
+        },
+        {
+          title: 'React Js',
+          icon_class_name: 'devicon-react-original colored',
+        },
+        {
+          title: 'Next Js',
+          icon_class_name: 'devicon-nextjs-original colored',
+        },
+        {
+          title: 'Express Js',
+          icon_class_name: 'devicon-express-original colored',
+        },
+        {
+          title: 'Vue Js',
+          icon_class_name: 'devicon-vuejs-plain colored',
+        },
+        {
+          title: 'Laravel',
+          icon_class_name: 'devicon-laravel-plain colored',
+        },
+        {
+          title: 'PHP',
+          icon_class_name: 'devicon-php-plain colored',
+        },
+        {
+          title: 'JavaScript',
+          icon_class_name: 'devicon-javascript-plain colored',
+        },
+        {
+          title: 'Bootstrap',
+          icon_class_name: 'devicon-bootstrap-plain colored',
+        },
+        {
+          title: 'Tailwind',
+          icon_class_name: 'devicon-tailwindcss-plain colored',
+        },
+        {
+          title: 'CSS',
+          icon_class_name: 'devicon-css3-plain colored',
+        },
+        {
+          title: 'HTML',
+          icon_class_name: 'devicon-html5-plain colored',
+        },
+        {
+          title: 'MySQL',
+          icon_class_name: 'devicon-mysql-plain colored',
+        },
+        {
+          title: 'Redux',
+          icon_class_name: 'devicon-redux-original colored',
+        },
+        {
+          title: 'Redis',
+          icon_class_name: 'devicon-redis-plain colored',
+        },
+        {
+          title: 'Git',
+          icon_class_name: 'devicon-git-plain colored',
         },
       ],
     },

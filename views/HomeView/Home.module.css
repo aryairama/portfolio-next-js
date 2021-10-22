@@ -1,0 +1,25 @@
+.about-me-container {
+  @apply container;
+}
+
+.skills-bg {
+  @apply bg-gray-100;
+}
+
+.skills-container {
+  @apply container py-20;
+}
+
+.skills-header {
+  @apply text-[32px] text-center font-bold text-[#252934];
+}
+
+.carousel-skill {
+  @apply mt-5;
+}
+
+@screen md {
+  .skills-header {
+    @apply text-4xl;
+  }
+}

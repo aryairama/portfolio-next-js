@@ -1,0 +1,15 @@
+.card-skill-container {
+  @apply p-3 my-6 bg-white shadow-lg break-all rounded-md flex flex-col items-center text-[#252934] transition-all duration-300;
+}
+
+.card-skill-container:hover {
+  @apply pt-6 mb-3 -mt-3;
+}
+
+.card-skill-icon {
+  @apply text-6xl;
+}
+
+.card-skill-title {
+  @apply text-xl mt-3;
+}
