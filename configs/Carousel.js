@@ -8,18 +8,20 @@ export const configSkillsCarousel = {
   autoplaySpeed: 1500,
   cssEase: 'linear',
   swipeToSlide: true,
-  dotsClass: 'slick-dots text-start',
+  dotsClass: 'slick-dots md:!-bottom-8 !-bottom-16',
   responsive: [
     {
       breakpoint: 400,
       settings: {
-        slidesToShow: 1.5,
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
     },
     {
       breakpoint: 460,
       settings: {
-        slidesToShow: 1.8,
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
     },
     {

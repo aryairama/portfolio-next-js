@@ -3,15 +3,38 @@
 @tailwind utilities;
 
 .slick-prev {
-    left: 3% !important;
-    z-index: 1;
+  @apply !-left-1 !z-[1];
 }
 
 .slick-next {
-    right: 3% !important;
-    z-index: 1;
+  @apply !-right-1 !z-[1];
 }
 
-.slick-slide>div {
-    padding: 0 10px;
+.slick-prev::before,
+.slick-next::before {
+  @apply !text-[#252934];
+}
+
+.slick-slide > div {
+  padding: 0 10px;
+}
+
+@screen sm {
+  .slick-prev {
+    @apply !-left-2;
+  }
+
+  .slick-next {
+    @apply !-right-2;
+  }
+}
+
+@screen md {
+  .slick-prev {
+    @apply !-left-1;
+  }
+
+  .slick-next {
+    @apply !-right-1;
+  }
 }
