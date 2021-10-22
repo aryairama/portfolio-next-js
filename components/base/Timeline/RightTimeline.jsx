@@ -5,13 +5,13 @@ import moment from 'moment';
 const RightTimeline = ({ startDate, endDate, position, institution, description, type, ...props }) => {
   return (
     <div className={style['timeline-right-container']}>
-      <div className={style['timeline-right-ruler-layout']}>
+      <div data-aos="fade-up" className={style['timeline-right-ruler-layout']}>
         <div className={style['timeline-right-ruler-inner']}>
           <div className={style['timeline-right-ruler']}></div>
         </div>
         <div className={style['timeline-right-ruler-bullet']}></div>
       </div>
-      <div className={style['timeline-right-layout']}>
+      <div data-aos="zoom-in-left" className={style['timeline-right-layout']}>
         <h3 className={style['timeline-content-header']}>{position ? `${position} - ${institution}` : institution}</h3>
         <p className={style['timeline-content-date']}>
           {moment(startDate).format('MMMM-YYYY')} - {moment(endDate).format('MMMM-YYYY')}
