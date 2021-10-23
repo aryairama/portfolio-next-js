@@ -1,10 +1,6 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
 
 const Meta = () => {
-  useEffect(() => {
-    document.body.classList.add('overflow-x-hidden');
-  }, []);
   return (
     <Head>
       <meta
