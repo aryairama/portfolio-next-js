@@ -1,6 +1,7 @@
 import HomeView from '../views/HomeView';
 import Aos from 'aos';
 import { useEffect } from 'react';
+import { WrapperAos } from '../components/base';
 
 export default function Home({
   name,
@@ -16,25 +17,26 @@ export default function Home({
 }) {
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 200 });
-    Aos.refresh();
     window.addEventListener('scroll', () => Aos.refresh());
     return () => {
       window.removeEventListener('scroll', () => Aos.refresh());
     };
   }, []);
   return (
-    <HomeView
-      name={name}
-      job={job}
-      avatar={avatar}
-      phoneNumber={phoneNumber}
-      email={email}
-      address={address}
-      contacts={contacts}
-      about={about}
-      skills={skills}
-      educationAndExperience={educationAndExperience}
-    />
+    <WrapperAos>
+      <HomeView
+        name={name}
+        job={job}
+        avatar={avatar}
+        phoneNumber={phoneNumber}
+        email={email}
+        address={address}
+        contacts={contacts}
+        about={about}
+        skills={skills}
+        educationAndExperience={educationAndExperience}
+      />
+    </WrapperAos>
   );
 }
 
