@@ -16,6 +16,7 @@ export default function Home({
 }) {
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 200 });
+    Aos.refresh();
     window.addEventListener('scroll', () => Aos.refresh());
     return () => {
       window.removeEventListener('scroll', () => Aos.refresh());
