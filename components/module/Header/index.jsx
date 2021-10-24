@@ -10,10 +10,14 @@ const Header = ({ name, job, avatar, phoneNumber, email, address, contacts }) =>
     <div className={style['header-container']}>
       <Particles options={headerParticles} className={style['header-particles']} />
       <div className={style['header-content']}>
-        <div data-aos="fade-right" className={style['header-content-left']}>
-          <div className={style['header-content-name']}>{name}</div>
-          <div className={style['header-content-job']}>{job}</div>
-          <div className={style['header-content-text-contact']}>
+        <div className={style['header-content-left']}>
+          <div data-aos="fade-right" data-aos-delay="300" className={style['header-content-name']}>
+            {name}
+          </div>
+          <div data-aos="fade-right" data-aos-delay="500" className={style['header-content-job']}>
+            {job}
+          </div>
+          <div data-aos="fade-right" data-aos-delay="700" className={style['header-content-text-contact']}>
             <TextIconContact icon="/assets/icons/whatsapp.svg" url={phoneNumber.url}>
               {phoneNumber.text}
             </TextIconContact>
@@ -24,7 +28,12 @@ const Header = ({ name, job, avatar, phoneNumber, email, address, contacts }) =>
               {address.text}
             </TextIconContact>
           </div>
-          <ListIconContactContainer className="-ml-1">
+          <ListIconContactContainer
+            data-aos="fade-right"
+            data-aos-delay="900"
+            data-aos-anchor="#header"
+            className="-ml-1"
+          >
             {contacts?.map((contact, index) => (
               <ListIconContact key={index} iconClassName={contact.icon_class_name} url={contact.url} />
             ))}

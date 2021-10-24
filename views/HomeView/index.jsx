@@ -31,7 +31,7 @@ const HomeView = ({
       <section id="about" className={style['about-me-container']}>
         <About text={about} />
       </section>
-      <section data-aos="fade-up" id="skills" className={style['skills-bg']}>
+      <section data-aos="fade-up" data-aos-duration="1000" id="skills" className={style['skills-bg']}>
         <div className={style['skills-container']}>
           <p className={style['skills-header']}>Skills</p>
           <Carousel className={style['carousel-skill']} config={configSkillsCarousel}>
