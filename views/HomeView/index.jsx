@@ -4,6 +4,8 @@ import { CardSkill, TimelineContainer, LeftTimeline, RightTimeline } from '../..
 import PropTypes from 'prop-types';
 import style from './Home.module.css';
 import React from 'react';
+import Particles from 'react-tsparticles';
+import { educationParticles } from '../../configs/tsParticles';
 
 const HomeView = ({
   name,
@@ -41,33 +43,40 @@ const HomeView = ({
           </Carousel>
         </div>
       </section>
-      <section data-aos="fade-up" id="education_experience" className={style['education-experience-container']}>
-        <p className={style['education-experience-header']}>Education & Experience</p>
-        <TimelineContainer className="mt-7">
-          {educationAndExperience?.map((value, index) => (
-            <React.Fragment key={index}>
-              {value.type === 'education' ? (
-                <LeftTimeline
-                  startDate={value.startDate}
-                  endDate={value.endDate}
-                  position={value.position}
-                  institution={value.institution}
-                  description={value.description}
-                  type={value.type}
-                />
-              ) : (
-                <RightTimeline
-                  startDate={value.startDate}
-                  endDate={value.endDate}
-                  position={value.position}
-                  institution={value.institution}
-                  description={value.description}
-                  type={value.type}
-                />
-              )}
-            </React.Fragment>
-          ))}
-        </TimelineContainer>
+      <section data-aos="fade-up" id="education_experience" className={style['education-experience']}>
+        <Particles
+          options={educationParticles}
+          id="educationParticles"
+          className={style['education-experience-particles']}
+        />
+        <div className={style['education-experience-container']}>
+          <p className={style['education-experience-header']}>Education & Experience</p>
+          <TimelineContainer className="mt-7">
+            {educationAndExperience?.map((value, index) => (
+              <React.Fragment key={index}>
+                {value.type === 'education' ? (
+                  <LeftTimeline
+                    startDate={value.startDate}
+                    endDate={value.endDate}
+                    position={value.position}
+                    institution={value.institution}
+                    description={value.description}
+                    type={value.type}
+                  />
+                ) : (
+                  <RightTimeline
+                    startDate={value.startDate}
+                    endDate={value.endDate}
+                    position={value.position}
+                    institution={value.institution}
+                    description={value.description}
+                    type={value.type}
+                  />
+                )}
+              </React.Fragment>
+            ))}
+          </TimelineContainer>
+        </div>
       </section>
     </LayoutPrimary>
   );

@@ -37,3 +37,38 @@ export const headerParticles = {
   },
   detectRetina: true,
 };
+
+export const educationParticles = {
+  fpsLimit: 60,
+  interactivity: {
+    detectsOn: 'canvas',
+    events: {
+      resize: { enable: true, mode: 'bubble' },
+    },
+    modes: {
+      bubble: {
+        distance: 400,
+        duration: 2,
+        opacity: 0.8,
+        size: 40,
+      },
+    },
+  },
+  particles: {
+    color: { value: '#f3f4f6' },
+    move: {
+      bounce: false,
+      direction: 'none',
+      enable: true,
+      outMode: 'bounce',
+      random: false,
+      speed: 1,
+      straight: false,
+    },
+    number: { density: { enable: true, value_area: 1000 }, value: 50 },
+    opacity: { value: 1 },
+    shape: { type: 'circle' },
+    size: { random: true, value: 10 },
+  },
+  detectRetina: true,
+};

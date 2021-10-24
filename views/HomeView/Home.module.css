@@ -19,8 +19,16 @@
   @apply mt-5;
 }
 
+.education-experience {
+  @apply py-20 relative;
+}
+
 .education-experience-container {
-  @apply container py-20;
+  @apply container z-40 relative;
+}
+
+.education-experience-particles {
+  @apply absolute top-0 left-0 right-0 bottom-0 h-full w-full z-30;
 }
 
 @screen md {

@@ -46,7 +46,7 @@ export async function getServerSideProps(context) {
       name: 'Arya Irama Wahono',
       job: 'Fullstack Web Developer',
       avatar: '/assets/profile/cv5_compress.jpg',
-      phoneNumber: { url: 'https://wa.link/e85y2f', text: '+6285334016482' },
+      phoneNumber: { url: 'https://wa.link/e85y2f', text: '+6285156081398' },
       email: { url: 'mailto:aryairama987@gmail.com', text: 'aryairama987@gmail.com' },
       address: { url: 'https://goo.gl/maps/25zim3tHTXvkvcTo7', text: 'Trenggalek, Jawa Timur, Indonesia' },
       about:

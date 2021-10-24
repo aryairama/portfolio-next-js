@@ -8,16 +8,31 @@ import { TextIconContact, ListIconContactContainer, ListIconContact } from '../.
 const Header = ({ name, job, avatar, phoneNumber, email, address, contacts }) => {
   return (
     <div className={style['header-container']}>
-      <Particles options={headerParticles} className={style['header-particles']} />
+      <Particles options={headerParticles} id="headerParticles" className={style['header-particles']} />
       <div className={style['header-content']}>
         <div className={style['header-content-left']}>
-          <div data-aos="fade-right" data-aos-delay="300" className={style['header-content-name']}>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="300"
+            data-aos-anchor="#header"
+            className={style['header-content-name']}
+          >
             {name}
           </div>
-          <div data-aos="fade-right" data-aos-delay="500" className={style['header-content-job']}>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="500"
+            data-aos-anchor="#header"
+            className={style['header-content-job']}
+          >
             {job}
           </div>
-          <div data-aos="fade-right" data-aos-delay="700" className={style['header-content-text-contact']}>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="700"
+            data-aos-anchor="#header"
+            className={style['header-content-text-contact']}
+          >
             <TextIconContact icon="/assets/icons/whatsapp.svg" url={phoneNumber.url}>
               {phoneNumber.text}
             </TextIconContact>
