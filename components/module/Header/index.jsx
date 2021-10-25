@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import style from './Header.module.css';
-import Particles from 'react-tsparticles';
+// import Particles from 'react-tsparticles';
 import PropTypes from 'prop-types';
 import { headerParticles } from '../../../configs/tsParticles';
 import { TextIconContact, ListIconContactContainer, ListIconContact } from '../../base';
@@ -8,7 +8,7 @@ import { TextIconContact, ListIconContactContainer, ListIconContact } from '../.
 const Header = ({ name, job, avatar, phoneNumber, email, address, contacts }) => {
   return (
     <div className={style['header-container']}>
-      <Particles options={headerParticles} id="headerParticles" className={style['header-particles']} />
+      {/* <Particles params={headerParticles} id="headerParticles" className={style['header-particles']} /> */}
       <div className={style['header-content']}>
         <div className={style['header-content-left']}>
           <div
