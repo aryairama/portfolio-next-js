@@ -4,7 +4,8 @@ import { CardSkill, TimelineContainer, LeftTimeline, RightTimeline } from '../..
 import PropTypes from 'prop-types';
 import style from './Home.module.css';
 import React from 'react';
-import Particles from 'react-tsparticles';
+import dynamic from 'next/dynamic';
+const Particles = dynamic(() => import('react-tsparticles'), { ssr: false });
 import { educationParticles } from '../../configs/tsParticles';
 
 const HomeView = ({
