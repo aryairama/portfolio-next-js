@@ -4,7 +4,8 @@ import { CardSkill, TimelineContainer, LeftTimeline, RightTimeline } from '../..
 import PropTypes from 'prop-types';
 import style from './Home.module.css';
 import React from 'react';
-// import Particles from 'react-tsparticles';
+import dynamic from 'next/dynamic';
+const Particles = dynamic(() => import('react-tsparticles'), { ssr: false });
 import { educationParticles } from '../../configs/tsParticles';
 
 const HomeView = ({
@@ -44,11 +45,11 @@ const HomeView = ({
         </div>
       </section>
       <section data-aos="fade-up" id="education_experience" className={style['education-experience']}>
-        {/* <Particles
+        <Particles
           options={educationParticles}
           id="educationParticles"
           className={style['education-experience-particles']}
-        /> */}
+        />
         <div className={style['education-experience-container']}>
           <p className={style['education-experience-header']}>Education & Experience</p>
           <TimelineContainer className="mt-7">
