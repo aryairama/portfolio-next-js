@@ -7,6 +7,9 @@ import { headerParticles } from '../../../configs/tsParticles';
 import { TextIconContact, ListIconContactContainer, ListIconContact } from '../../base';
 
 const Header = ({ name, job, avatar, phoneNumber, email, address, contacts }) => {
+  if (process.browser) {
+    require('pathseg');
+  }
   return (
     <div className={style['header-container']}>
       <ParticlesCsr params={headerParticles} id="headerParticles" className={style['header-particles']} />
