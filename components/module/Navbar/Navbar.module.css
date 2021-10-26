@@ -3,7 +3,8 @@
 }
 
 .navbar-scroll {
-  @apply bg-[#252934] shadow-md transition-all duration-500;
+  @apply shadow-md transition-all duration-500;
+  background: #252934;
 }
 
 .navbar-container {
@@ -21,12 +22,13 @@
 }
 
 .navbar.show-navbar {
-  @apply bg-[#252934];
+  background: #252934;
 }
 
 .navbar-menu-right.show-navbar {
   transition: opacity 400ms, height 400ms ease-in-out;
-  @apply opacity-100 h-full border-t border-white mt-2;
+  border-color: white;
+  @apply opacity-100 h-full border-t mt-2;
 }
 
 .navbar-menu-right.show-navbar > .navbar-menu {
@@ -49,7 +51,8 @@
 
 .li-menu::after {
   content: '';
-  @apply h-[2px] w-0 bg-white block transition-all duration-300 absolute;
+  background: white;
+  @apply h-[2px] w-0 block transition-all duration-300 absolute;
 }
 
 .li-menu:hover::after {
@@ -58,7 +61,8 @@
 }
 
 .li-menu-a {
-  @apply text-[20px] font-semibold text-white px-5 py-2;
+  color: white;
+  @apply text-[20px] font-semibold px-5 py-2;
 }
 
 @screen md {
@@ -96,5 +100,6 @@
 }
 
 .text-brand {
-  @apply text-white font-bold;
+  color: white;
+  @apply font-bold;
 }

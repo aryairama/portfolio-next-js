@@ -3,7 +3,7 @@
 }
 
 .skills-bg {
-  @apply bg-gray-100;
+  background-color: #f3f4f6;
 }
 
 .skills-container {
@@ -12,7 +12,8 @@
 
 .skills-header,
 .education-experience-header {
-  @apply text-[32px] text-center font-bold text-[#252934];
+  color: #252934;
+  @apply text-[32px] text-center font-bold;
 }
 
 .carousel-skill {

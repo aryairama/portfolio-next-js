@@ -12,7 +12,7 @@
 
 .slick-prev::before,
 .slick-next::before {
-  @apply !text-[#252934];
+  color: #252934 !important;
 }
 
 .slick-slide > div {

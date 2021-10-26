@@ -1,6 +1,7 @@
 .header-container {
   /* @apply relative flex justify-center items-center min-h-screen w-full bg-[#252934] pt-[86px] pb-12; */
-  @apply relative min-h-screen w-full bg-[#252934] pt-[70px] pb-12;
+  @apply relative min-h-screen w-full pt-[70px] pb-12;
+  background-color: #252934;
   /* background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%); */
   /* background: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
   /* background: linear-gradient(89deg, rgb(21, 74, 189) 0.1%, rgb(26, 138, 211) 51.5%, rgb(72, 177, 234) 100.2%); */
@@ -11,15 +12,16 @@
 }
 
 .header-content {
-  @apply relative container grid grid-cols-1 gap-4 text-white z-40;
+  @apply relative container flex flex-col items-center gap-4 z-40;
+  color: white;
 }
 
 .header-content-left {
-  @apply col-span-1 order-2 place-self-center;
+  @apply order-2;
 }
 
 .header-content-right {
-  @apply col-span-1 order-1 place-self-center;
+  @apply order-1;
 }
 
 .header-content-name {
@@ -31,11 +33,13 @@
 }
 
 .header-content-avatar-container {
-  @apply w-64 h-64 rounded-full bg-gray-600 flex justify-center items-center;
+  background: #4b5563;
+  @apply w-64 h-64 rounded-full flex justify-center items-center;
 }
 
 .header-content-avatar {
-  @apply w-60 h-60 rounded-full bg-gray-500 object-cover relative transition-all duration-300;
+  background: #6b7280;
+  @apply w-60 h-60 rounded-full object-cover relative transition-all duration-300;
 }
 
 .header-content-avatar-container:hover > .header-content-avatar {
@@ -51,15 +55,15 @@
     @apply pt-[150px];
   }
   .header-content {
-    @apply grid-cols-12 gap-6;
+    @apply flex flex-row w-full gap-6 items-start;
   }
 
   .header-content-left {
-    @apply col-span-7 order-1 place-self-start;
+    @apply w-7/12 order-1;
   }
 
   .header-content-right {
-    @apply col-span-5 order-2 place-self-start;
+    @apply w-5/12 order-2;
   }
 
   .header-content-name {
@@ -93,11 +97,11 @@
   }
 
   .header-content-left {
-    @apply col-span-8;
+    @apply w-8/12;
   }
 
   .header-content-right {
-    @apply col-span-4;
+    @apply w-4/12;
   }
 
   .header-content-avatar-container {
