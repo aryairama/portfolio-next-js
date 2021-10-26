@@ -1,0 +1,15 @@
+.alert-not-support {
+  @apply fixed w-[90%] z-[999] p-3 rounded-lg my-20 left-[5%] border-b-4 flex items-center;
+  background: white;
+  border-color: #f1c40f;
+}
+
+.alert-not-support > i {
+  @apply cursor-pointer;
+}
+
+@screen md {
+  .alert-not-support {
+    @apply w-1/2 left-[25%];
+  }
+}
