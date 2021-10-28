@@ -7,12 +7,13 @@
   background-color: #f3f4f6;
 }
 
-.skills-container {
+.skills-container,
+.contact-container {
   @apply container pt-20 pb-32;
 }
 
 .project-container {
-  @apply container pt-20 pb-72;
+  @apply container pt-20 pb-56;
 }
 
 .project-bg {
@@ -51,11 +52,11 @@
 }
 
 .project-shape-divider {
-  @apply absolute bottom-0 left-0 w-full overflow-hidden z-30;
+  @apply absolute bottom-0 left-0 w-full z-30;
 }
 
 .project-shape-divider svg {
-  @apply relative block w-[calc(100%+1.3px)] h-[200px];
+  @apply relative block w-full h-[100px];
 }
 
 .project-shape-divider .project-shape-fill {

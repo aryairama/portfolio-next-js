@@ -116,6 +116,7 @@ const HomeView = ({
           </svg>
         </div>
       </section>
+      <section data-aos="fade-up" id="contact" className={style['contact-container']}></section>
     </LayoutPrimary>
   );
 };

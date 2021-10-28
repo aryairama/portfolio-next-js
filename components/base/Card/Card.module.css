@@ -35,7 +35,7 @@
 .card-preview-layout {
   transition: bottom ease-in-out 200ms, opacity ease-in-out 200ms;
   bottom: -80%;
-  @apply relative flex w-full h-full flex-col flex-wrap items-center opacity-0;
+  @apply relative flex w-full flex-col flex-wrap items-center opacity-0;
 }
 
 .card-preview-icon {
