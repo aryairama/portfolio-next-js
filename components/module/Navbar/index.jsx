@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import style from './Navbar.module.css';
 import PropTypes from 'prop-types';
-import Router from 'next/router';
 
 const Navbar = ({ sectionHeader, ...props }) => {
   const [show, setShow] = useState(false);
@@ -24,6 +23,14 @@ const Navbar = ({ sectionHeader, ...props }) => {
       window.removeEventListener('scroll', onScroll);
     };
   }, []);
+  const scrollTo = (id) => {
+    if (typeof window !== 'undefined') {
+      window.scroll({
+        top: document.querySelector(id).offsetTop - navbarRef.current.offsetHeight / 2,
+        behavior: 'smooth',
+      });
+    }
+  };
   return (
     <div
       ref={navbarRef}
@@ -41,32 +48,32 @@ const Navbar = ({ sectionHeader, ...props }) => {
         <div className={`${style['navbar-menu-right']} ${show ? style['show-navbar'] : ''}`}>
           <div className={style['navbar-menu']}>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/')} className={style['li-menu-a']}>
+              <div onClick={() => scrollTo('#header')} className={style['li-menu-a']}>
                 Home
               </div>
             </div>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/#about')} className={style['li-menu-a']}>
+              <div onClick={() => scrollTo('#about')} className={style['li-menu-a']}>
                 About
               </div>
             </div>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/#skills')} className={style['li-menu-a']}>
+              <div onClick={() => scrollTo('#skills')} className={style['li-menu-a']}>
                 Skills
               </div>
             </div>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/#education_experience')} className={style['li-menu-a']}>
+              <div onClick={() => scrollTo('#education_experience')} className={style['li-menu-a']}>
                 Education & Experience
               </div>
             </div>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/#project')} className={style['li-menu-a']}>
+              <div onClick={() => scrollTo('#project')} className={style['li-menu-a']}>
                 Projects
               </div>
             </div>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/#contact')} className={style['li-menu-a']}>
+              <div onClick={() => scrollTo('#contact')} className={style['li-menu-a']}>
                 Contact
               </div>
             </div>

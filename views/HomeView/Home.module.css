@@ -1,5 +1,5 @@
 .about-me-container {
-  @apply container;
+  @apply container pt-4;
 }
 
 .skills-bg,
