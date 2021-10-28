@@ -1,4 +1,4 @@
-import { Navbar, Header } from '../';
+import { Navbar, Header, Footer } from '../';
 import { useRef } from 'react';
 import PropTypes from 'prop-types';
 
@@ -19,6 +19,7 @@ const LayoutPrimary = (props) => {
         />
       </section>
       {props.children}
+      <Footer contacts={props.contacts} />
     </>
   );
 };

@@ -6,12 +6,24 @@
   @apply w-[10%] flex justify-center items-center cursor-pointer p-1 transition-all duration-300;
 }
 
+.list-icon-contact-footer {
+  @apply w-[10%] flex justify-center items-center cursor-pointer p-2 transition-all duration-300;
+}
+
+.list-icon-contact-footer:hover {
+  background: white;
+  @apply rounded-md transition-all duration-300;
+}
+
 .list-icon-contact:hover {
   background: white;
-  @apply -mt-3 mb-3 rounded-md;
+  @apply -mt-3 mb-3 rounded-md transition-all duration-300;
 }
 
 .list-icon-contact:hover > .list-icon-contact-icon {
+  color: #252934;
+}
+.list-icon-contact-footer:hover > .list-icon-contact-icon-footer {
   color: #252934;
 }
 
@@ -19,14 +31,24 @@
   @apply text-[1.3rem];
 }
 
+.list-icon-contact-icon-footer {
+  @apply text-[1.5rem];
+}
+
 @screen md {
   .list-icon-contact {
     @apply w-[8%];
+  }
+  .list-icon-contact-footer {
+    @apply w-[6%];
   }
 }
 
 @screen lg {
   .list-icon-contact {
     @apply w-[4.6%];
+  }
+  .list-icon-contact-footer {
+    @apply w-[4%];
   }
 }
