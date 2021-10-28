@@ -1,6 +1,13 @@
 import { LayoutPrimary, About, Carousel } from '../../components/module';
 import { configSkillsCarousel } from '../../configs/Carousel';
-import { CardSkill, TimelineContainer, LeftTimeline, RightTimeline } from '../../components/base';
+import {
+  CardSkill,
+  TimelineContainer,
+  LeftTimeline,
+  RightTimeline,
+  CardProjectContainer,
+  Card,
+} from '../../components/base';
 import PropTypes from 'prop-types';
 import style from './Home.module.css';
 import React from 'react';
@@ -19,6 +26,7 @@ const HomeView = ({
   about,
   skills,
   educationAndExperience,
+  projects,
   ...props
 }) => {
   return (
@@ -79,6 +87,35 @@ const HomeView = ({
           </TimelineContainer>
         </div>
       </section>
+      <section data-aos="fade-up" id="project" className={style['project-bg']}>
+        <div className={style['project-container']}>
+          <p className={style['project-header']}>Projects</p>
+          <CardProjectContainer>
+            {projects?.map((project, index) => (
+              <Card
+                key={index}
+                image={project.image}
+                title={project.title}
+                shortDescription={project.short_description}
+                skillAndPackage={project.skill_and_package}
+                typeUrl={project.type_url}
+                preview={project.preview}
+                url={project.url}
+                data-aos="fade-up"
+                data-aos-anchor="#project"
+              ></Card>
+            ))}
+          </CardProjectContainer>
+        </div>
+        <div className={style['project-shape-divider']}>
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z"
+              className={style['project-shape-fill']}
+            ></path>
+          </svg>
+        </div>
+      </section>
     </LayoutPrimary>
   );
 };
@@ -103,6 +140,7 @@ HomeView.propTypes = {
   about: PropTypes.string.isRequired,
   skills: PropTypes.array.isRequired,
   educationAndExperience: PropTypes.array.isRequired,
+  projects: PropTypes.array.isRequired,
 };
 
 export default HomeView;

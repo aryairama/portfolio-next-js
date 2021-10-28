@@ -2,7 +2,8 @@
   @apply container;
 }
 
-.skills-bg {
+.skills-bg,
+.project-bg {
   background-color: #f3f4f6;
 }
 
@@ -10,8 +11,17 @@
   @apply container pt-20 pb-32;
 }
 
+.project-container {
+  @apply container pt-20 pb-72;
+}
+
+.project-bg {
+  @apply relative;
+}
+
 .skills-header,
-.education-experience-header {
+.education-experience-header,
+.project-header {
   color: #252934;
   @apply text-[32px] text-center font-bold;
 }
@@ -34,7 +44,20 @@
 
 @screen md {
   .skills-header,
-  .education-experience-header {
+  .education-experience-header,
+  .project-header {
     @apply text-4xl;
   }
+}
+
+.project-shape-divider {
+  @apply absolute bottom-0 left-0 w-full overflow-hidden z-30;
+}
+
+.project-shape-divider svg {
+  @apply relative block w-[calc(100%+1.3px)] h-[200px];
+}
+
+.project-shape-divider .project-shape-fill {
+  fill: #ffffff;
 }

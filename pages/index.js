@@ -14,6 +14,7 @@ export default function Home({
   about,
   skills,
   educationAndExperience,
+  projects,
 }) {
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 200 });
@@ -31,6 +32,7 @@ export default function Home({
         about={about}
         skills={skills}
         educationAndExperience={educationAndExperience}
+        projects={projects}
       />
     </WrapperAos>
   );
@@ -190,6 +192,62 @@ export async function getServerSideProps(context) {
           endDate: '2015-06-19T10:00:00.000Z',
           description: '',
           type: 'education',
+        },
+      ],
+      projects: [
+        {
+          image: '/assets/projects/tokoku.png',
+          title: 'TokoKu',
+          short_description: 'Fashion e-commerce that supports multi-seller.',
+          skill_and_package: ['React Js', 'Bootstrap 5', 'Express Js', 'MySQL', 'Redux'],
+          type_url: 'external',
+          url: 'https://github.com/aryairama/arkademy-react-TokoKu',
+          preview: true,
+        },
+        {
+          image: '/assets/projects/zwallet.png',
+          title: 'Zwallet',
+          short_description: 'A financial application that already has a top up feature with a payment gateway.',
+          skill_and_package: ['React Js', 'Bootstrap 5', 'Express Js', 'MySQL', 'Redux'],
+          type_url: 'external',
+          url: 'https://github.com/aryairama/zwallet-react',
+          preview: true,
+        },
+        {
+          image: '/assets/projects/vehicle_rental.png',
+          title: 'Vehicle Rental',
+          short_description: 'Vehicle rental app for bicycles, motorbikes and cars.',
+          skill_and_package: ['Next Js', 'Tailwind', 'Express Js', 'MySQL', 'Redux'],
+          type_url: 'external',
+          url: 'https://github.com/aryairama/next-vehicle-rental',
+          preview: true,
+        },
+        {
+          image: '/assets/projects/telegram.png',
+          title: 'Telegram Clone',
+          short_description: 'Websocket-based realtime chat application.',
+          skill_and_package: ['Next Js', 'Tailwind', 'Express Js', 'MySQL', 'Redux', 'Socket.IO'],
+          type_url: 'external',
+          url: 'https://github.com/aryairama/telegram-next-js',
+          preview: true,
+        },
+        {
+          image: '/assets/projects/coffee_shop.png',
+          title: 'Coffee Shop',
+          short_description: 'A cafe management application that sells food that is usually found in cafes.',
+          skill_and_package: ['Next Js', 'Styled components', 'Express Js', 'MySQL', 'Redux'],
+          type_url: 'external',
+          url: 'https://github.com/aryairama/coffe-shop-next',
+          preview: true,
+        },
+        {
+          image: '/assets/projects/simbkk.png',
+          title: 'Simbkk',
+          short_description: 'Application for recording and monitoring alumni of all vocational schools in Trenggalek.',
+          skill_and_package: ['Laravel 6', 'Bootstrap 4', 'Mysql'],
+          type_url: 'external',
+          url: 'https://github.com/aryairama/SIMBKK',
+          preview: false,
         },
       ],
     },

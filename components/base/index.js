@@ -7,3 +7,5 @@ export { default as LeftTimeline } from './Timeline/LeftTimeline';
 export { default as RightTimeline } from './Timeline/RightTimeline';
 export { default as Meta } from './Meta';
 export { default as WrapperAos } from './WrapperAos';
+export { default as CardProjectContainer } from './Card/CardProjectContainer';
+export { default as Card } from './Card';
