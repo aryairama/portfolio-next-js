@@ -25,7 +25,13 @@ const Navbar = ({ sectionHeader, ...props }) => {
   }, []);
   const scrollTo = (id) => {
     if (typeof window !== 'undefined') {
-      window.scrollTo(0, document.querySelector(id).offsetTop - navbarRef.current.offsetHeight / 2);
+      let scroll = 0;
+      if (window.innerWidth >= 768) {
+        scroll = document.querySelector(id).offsetTop - navbarRef.current.offsetHeight / 2;
+      } else {
+        scroll = document.querySelector(id).offsetTop;
+      }
+      window.scrollTo(0, scroll);
     }
   };
   return (
