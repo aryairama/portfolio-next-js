@@ -22,7 +22,8 @@
 
 .skills-header,
 .education-experience-header,
-.project-header {
+.project-header,
+.contact-header {
   color: #252934;
   @apply text-[32px] text-center font-bold;
 }
@@ -43,11 +44,26 @@
   @apply absolute top-0 left-0 right-0 bottom-0 h-full w-full z-30;
 }
 
+.layout-form-contact {
+  @apply w-full mx-auto mt-5 p-5;
+}
+
 @screen md {
   .skills-header,
   .education-experience-header,
-  .project-header {
+  .project-header,
+  .contact-header {
     @apply text-4xl;
+  }
+
+  .layout-form-contact {
+    @apply w-[55%];
+  }
+}
+
+@screen lg {
+  .layout-form-contact {
+    @apply w-[45%];
   }
 }
 

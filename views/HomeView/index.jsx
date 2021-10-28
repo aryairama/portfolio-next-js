@@ -7,6 +7,9 @@ import {
   RightTimeline,
   CardProjectContainer,
   Card,
+  InputContact,
+  TextareaContact,
+  Button,
 } from '../../components/base';
 import PropTypes from 'prop-types';
 import style from './Home.module.css';
@@ -44,7 +47,9 @@ const HomeView = ({
       </section>
       <section data-aos="fade-up" data-aos-duration="1000" id="skills" className={style['skills-bg']}>
         <div className={style['skills-container']}>
-          <p className={style['skills-header']}>Skills</p>
+          <p data-aos="fade-left" className={style['skills-header']}>
+            Skills
+          </p>
           <Carousel className={style['carousel-skill']} config={configSkillsCarousel}>
             {skills?.map((skill, index) => (
               <CardSkill iconClassName={skill.icon_class_name} title={skill.title} key={index} />
@@ -59,7 +64,9 @@ const HomeView = ({
           className={style['education-experience-particles']}
         />
         <div className={style['education-experience-container']}>
-          <p className={style['education-experience-header']}>Education & Experience</p>
+          <p data-aos="fade-right" className={style['education-experience-header']}>
+            Education & Experience
+          </p>
           <TimelineContainer className="mt-7">
             {educationAndExperience?.map((value, index) => (
               <React.Fragment key={index}>
@@ -89,7 +96,9 @@ const HomeView = ({
       </section>
       <section data-aos="fade-up" id="project" className={style['project-bg']}>
         <div className={style['project-container']}>
-          <p className={style['project-header']}>Projects</p>
+          <p data-aos="fade-left" className={style['project-header']}>
+            Projects
+          </p>
           <CardProjectContainer>
             {projects?.map((project, index) => (
               <Card
@@ -116,7 +125,19 @@ const HomeView = ({
           </svg>
         </div>
       </section>
-      <section data-aos="fade-up" id="contact" className={style['contact-container']}></section>
+      <section data-aos="fade-up" id="contact" className={style['contact-container']}>
+        <p data-aos="fade-right" className={style['contact-header']}>
+          Contact
+        </p>
+        <div className={style['layout-form-contact']}>
+          <InputContact placeholder="Name"></InputContact>
+          <InputContact placeholder="Enter email"></InputContact>
+          <TextareaContact placeholder="Your message" rows="5"></TextareaContact>
+          <Button type="primary" className="w-full py-3">
+            Submit
+          </Button>
+        </div>
+      </section>
     </LayoutPrimary>
   );
 };

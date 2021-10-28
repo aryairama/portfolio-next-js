@@ -9,3 +9,6 @@ export { default as Meta } from './Meta';
 export { default as WrapperAos } from './WrapperAos';
 export { default as CardProjectContainer } from './Card/CardProjectContainer';
 export { default as Card } from './Card';
+export { default as InputContact } from './Input/InputContact';
+export { default as TextareaContact } from './Input/TextareaContact';
+export { default as Button } from './Button';

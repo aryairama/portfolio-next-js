@@ -1,0 +1,21 @@
+.input-contact-container {
+  @apply w-full mb-3;
+}
+
+.input-contact {
+  border-color: #252934;
+  color: #252934;
+  @apply appearance-none w-full border outline-none rounded-lg p-1 leading-7;
+  @apply text-lg;
+}
+
+.textarea-contact {
+  border-color: #252934;
+  color: #252934;
+  @apply appearance-none w-full border outline-none rounded-lg p-1;
+}
+
+.input-contact::placeholder,
+.textarea-contact::placeholder {
+  color: #252934;
+}

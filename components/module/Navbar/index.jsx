@@ -46,22 +46,27 @@ const Navbar = ({ sectionHeader, ...props }) => {
               </div>
             </div>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/jos')} className={style['li-menu-a']}>
+              <div onClick={() => Router.push('/#about')} className={style['li-menu-a']}>
                 About
               </div>
             </div>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/jos')} className={style['li-menu-a']}>
+              <div onClick={() => Router.push('/#skills')} className={style['li-menu-a']}>
                 Skills
               </div>
             </div>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/jos')} className={style['li-menu-a']}>
+              <div onClick={() => Router.push('/#education_experience')} className={style['li-menu-a']}>
+                Education & Experience
+              </div>
+            </div>
+            <div className={style['li-menu']}>
+              <div onClick={() => Router.push('/#project')} className={style['li-menu-a']}>
                 Projects
               </div>
             </div>
             <div className={style['li-menu']}>
-              <div onClick={() => Router.push('/jos')} className={style['li-menu-a']}>
+              <div onClick={() => Router.push('/#contact')} className={style['li-menu-a']}>
                 Contact
               </div>
             </div>
