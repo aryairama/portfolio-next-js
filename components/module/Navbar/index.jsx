@@ -25,10 +25,7 @@ const Navbar = ({ sectionHeader, ...props }) => {
   }, []);
   const scrollTo = (id) => {
     if (typeof window !== 'undefined') {
-      window.scroll({
-        top: document.querySelector(id).offsetTop - navbarRef.current.offsetHeight / 2,
-        behavior: 'smooth',
-      });
+      window.scrollTo(0, document.querySelector(id).offsetTop - navbarRef.current.offsetHeight / 2);
     }
   };
   return (
