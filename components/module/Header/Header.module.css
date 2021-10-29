@@ -1,13 +1,14 @@
 .header-container {
   /* @apply relative flex justify-center items-center min-h-screen w-full bg-[#252934] pt-[86px] pb-12; */
-  @apply relative min-h-screen w-full pt-[70px] pb-12;
-  background-color: #252934;
+  background: url('/assets/bg/1.jpg');
+  @apply relative min-h-screen w-full pt-[70px] pb-12 bg-cover bg-center bg-no-repeat;
   /* background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%); */
   /* background: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
   /* background: linear-gradient(89deg, rgb(21, 74, 189) 0.1%, rgb(26, 138, 211) 51.5%, rgb(72, 177, 234) 100.2%); */
 }
 
-.header-particles {
+.header-mask {
+  background-color: rgba(37, 41, 52, 0.85);
   @apply absolute top-0 left-0 right-0 bottom-0 h-full w-full z-30;
 }
 

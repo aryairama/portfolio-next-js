@@ -14,9 +14,6 @@ import {
 import PropTypes from 'prop-types';
 import style from './Home.module.css';
 import React from 'react';
-import dynamic from 'next/dynamic';
-const Particles = dynamic(() => import('react-tsparticles'), { ssr: false });
-import { educationParticles } from '../../configs/tsParticles';
 
 const HomeView = ({
   name,
@@ -58,11 +55,7 @@ const HomeView = ({
         </div>
       </section>
       <section data-aos="fade-up" id="education_experience" className={style['education-experience']}>
-        <Particles
-          options={educationParticles}
-          id="educationParticles"
-          className={style['education-experience-particles']}
-        />
+        <div className={style['education-experience-mask']} />
         <div className={style['education-experience-container']}>
           <p data-aos="fade-right" className={style['education-experience-header']}>
             Education & Experience

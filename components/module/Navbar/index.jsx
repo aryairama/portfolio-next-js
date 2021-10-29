@@ -18,6 +18,7 @@ const Navbar = ({ sectionHeader, ...props }) => {
     }
   };
   useEffect(() => {
+    onScroll();
     window.addEventListener('scroll', onScroll);
     return () => {
       window.removeEventListener('scroll', onScroll);
