@@ -103,8 +103,7 @@ const HomeView = ({
                 typeUrl={project.type_url}
                 preview={project.preview}
                 url={project.url}
-                data-aos="fade-up"
-                data-aos-anchor="#project"
+                data-aos="flip-down"
               ></Card>
             ))}
           </CardProjectContainer>
