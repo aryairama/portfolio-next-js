@@ -30,6 +30,7 @@ const Navbar = ({ sectionHeader, ...props }) => {
         scroll = document.querySelector(id).offsetTop - navbarRef.current.offsetHeight / 2;
       } else {
         scroll = document.querySelector(id).offsetTop;
+        setShow(false);
       }
       window.scrollTo(0, scroll);
     }
