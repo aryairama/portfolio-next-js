@@ -33,14 +33,16 @@
 }
 
 .education-experience {
-  @apply py-20 relative;
+  background: url('/assets/bg/1.jpg');
+  @apply py-20 relative bg-cover bg-center bg-no-repeat;
 }
 
 .education-experience-container {
   @apply container z-40 relative;
 }
 
-.education-experience-particles {
+.education-experience-mask {
+  background: rgba(255, 255, 255, 0.9);
   @apply absolute top-0 left-0 right-0 bottom-0 h-full w-full z-30;
 }
 
