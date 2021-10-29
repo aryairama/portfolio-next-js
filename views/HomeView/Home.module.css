@@ -33,8 +33,12 @@
 }
 
 .education-experience {
+  @apply py-20 relative bg-no-repeat;
   background: url('/assets/bg/1.jpg');
-  @apply py-20 relative bg-cover bg-center bg-no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .education-experience-container {
