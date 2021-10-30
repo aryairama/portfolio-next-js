@@ -1,7 +1,11 @@
 import HomeView from '../views/HomeView';
 import Aos from 'aos';
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { WrapperAos } from '../components/base';
+import { sendContact } from '../redux/action/ContactAction';
+import SimpleReactValidator from 'simple-react-validator';
+import { useSelector } from 'react-redux';
+import { resetFrom } from '../configs/SimpleReactValidator';
 
 export default function Home({
   name,
@@ -16,6 +20,18 @@ export default function Home({
   educationAndExperience,
   projects,
 }) {
+  const [forceUpdate, setForceUpdate] = useState(false);
+  const validator = useRef(
+    new SimpleReactValidator({ className: 'text-red-600 text-sm', autoForceUpdate: forceUpdate })
+  );
+  const contactInitialState = { subject: '', name: '', email: '', message: '' };
+  const [contact, setContact] = useState(contactInitialState);
+  const handlerContact = (e) => setContact((oldval) => ({ ...oldval, [e.target.name]: e.target.value }));
+  const { loader } = useSelector((state) => state);
+  const resetStateContact = () => {
+    resetFrom(contactInitialState, setContact, validator);
+    setForceUpdate(!forceUpdate);
+  };
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 200 });
   }, []);
@@ -33,6 +49,12 @@ export default function Home({
         skills={skills}
         educationAndExperience={educationAndExperience}
         projects={projects}
+        sendContact={sendContact}
+        contact={contact}
+        handlerContact={handlerContact}
+        validator={validator}
+        resetStateContact={resetStateContact}
+        loader={loader}
       />
     </WrapperAos>
   );

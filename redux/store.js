@@ -12,8 +12,9 @@ const bindMiddleware = (middleware) => {
   return applyMiddleware(...middleware);
 };
 
-export const store = wrapMakeStore(() =>
-  createStore(
+export let clientStore = null;
+export const store = wrapMakeStore(() => {
+  clientStore = createStore(
     rootReducer,
     bindMiddleware([
       nextReduxCookieMiddleware({
@@ -23,6 +24,7 @@ export const store = wrapMakeStore(() =>
       }),
       thunk,
     ])
-  )
-);
+  );
+  return clientStore;
+});
 export const wrapper = createWrapper(store, { debug: false });

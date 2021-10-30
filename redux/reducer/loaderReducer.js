@@ -2,6 +2,7 @@ import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
   waiting: false,
+  type: [],
 };
 
 const loaderReducer = (state = initialState, action) => {
@@ -13,7 +14,8 @@ const loaderReducer = (state = initialState, action) => {
     case 'FETCHING':
       return {
         ...state,
-        waiting: action.payload,
+        waiting: action.payload.waiting,
+        type: action.payload.type,
       };
     default:
       return state;

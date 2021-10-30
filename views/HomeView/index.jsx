@@ -27,6 +27,12 @@ const HomeView = ({
   skills,
   educationAndExperience,
   projects,
+  sendContact,
+  contact,
+  handlerContact,
+  validator,
+  loader,
+  resetStateContact,
   ...props
 }) => {
   return (
@@ -122,10 +128,49 @@ const HomeView = ({
           Contact
         </p>
         <div className={style['layout-form-contact']}>
-          <InputContact placeholder="Name"></InputContact>
-          <InputContact placeholder="Enter email"></InputContact>
-          <TextareaContact placeholder="Your message" rows="5"></TextareaContact>
-          <Button type="primary" className="w-full py-3">
+          <InputContact
+            placeholder="Name"
+            name="name"
+            value={contact.name}
+            onChange={handlerContact}
+            onFocus={() => validator.current.showMessageFor('name')}
+          >
+            {validator.current.message('name', contact.name, `required|min:3`)}
+          </InputContact>
+          <InputContact
+            placeholder="Subject"
+            name="subject"
+            value={contact.subject}
+            onChange={handlerContact}
+            onFocus={() => validator.current.showMessageFor('subject')}
+          >
+            {validator.current.message('subject', contact.subject, `required|min:3`)}
+          </InputContact>
+          <InputContact
+            placeholder="Enter email"
+            name="email"
+            value={contact.email}
+            onChange={handlerContact}
+            onFocus={() => validator.current.showMessageFor('email')}
+          >
+            {validator.current.message('email', contact.email, 'required|email')}
+          </InputContact>
+          <TextareaContact
+            placeholder="Your message"
+            rows="5"
+            name="message"
+            value={contact.message}
+            onChange={handlerContact}
+            onFocus={() => validator.current.showMessageFor('message')}
+          >
+            {validator.current.message('message', contact.message, 'required|min:10')}
+          </TextareaContact>
+          <Button
+            disabled={validator.current.allValid() ? (loader.waiting ? true : false) : true}
+            onClick={() => sendContact(contact, resetStateContact)}
+            type="primary"
+            className="w-full py-3"
+          >
             Submit
           </Button>
         </div>
