@@ -1,5 +1,5 @@
 .about-grid-layout {
-  @apply flex flex-col items-center my-20;
+  @apply flex flex-col items-center;
 }
 
 .about-left-content {
