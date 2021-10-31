@@ -54,8 +54,31 @@
   @apply absolute top-0 left-0 right-0 bottom-0 h-full w-full z-30;
 }
 
+.layout-form-contact-container {
+  background: #252934;
+  @apply w-full h-[300px] relative mb-20 mt-10 mx-auto rounded-lg;
+}
+
+.layout-form-box-icon {
+  @apply text-white absolute left-[11%] top-[30%] text-center;
+}
+
+.layout-form-icon {
+  @apply text-[4rem];
+}
+
+.layout-form-box-text {
+  @apply font-bold text-xl mt-1;
+}
+
+.layout-form-box-text-question {
+  @apply text-sm mt-1;
+}
+
 .layout-form-contact {
-  @apply w-full mx-auto mt-5 p-5;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 10px;
+  @apply w-[95%] p-5 rounded-lg absolute left-[2.5%] top-4;
 }
 
 @screen md {
@@ -66,14 +89,30 @@
     @apply text-4xl;
   }
 
+  .layout-form-contact-container {
+    @apply w-[90%] my-20;
+  }
+
   .layout-form-contact {
-    @apply w-[55%];
+    @apply w-[60%] top-[-15%] left-[auto] right-0;
+  }
+
+  .layout-form-box-icon {
+    @apply left-[9%];
   }
 }
 
 @screen lg {
+  .layout-form-contact-container {
+    @apply w-[65%];
+  }
+
   .layout-form-contact {
-    @apply w-[45%];
+    @apply w-[60%];
+  }
+
+  .layout-form-box-icon {
+    @apply left-[11%];
   }
 }
 
