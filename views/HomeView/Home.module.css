@@ -1,23 +1,19 @@
 .about-me-container {
-  @apply container pt-20;
+  @apply container py-20;
 }
 
 .skills-bg,
 .project-bg {
-  @apply relative;
   background-color: #f3f4f6;
 }
 
-.skills-container {
-  @apply container pt-24 pb-16;
-}
-
+.skills-container,
 .contact-container {
   @apply container pt-20 pb-32;
 }
 
 .project-container {
-  @apply container pb-56;
+  @apply container pt-20 pb-56;
 }
 
 .project-bg {
@@ -37,7 +33,7 @@
 }
 
 .education-experience {
-  @apply py-32 relative bg-no-repeat;
+  @apply py-20 relative bg-no-repeat;
   /* background: url('/assets/bg/1.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;

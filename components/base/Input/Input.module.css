@@ -6,7 +6,6 @@
   border-color: #252934;
   color: #252934;
   @apply appearance-none w-full border outline-none rounded-lg p-1 leading-7;
-  @apply text-lg;
 }
 
 .textarea-contact {

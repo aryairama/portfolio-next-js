@@ -10,7 +10,6 @@ import {
   InputContact,
   TextareaContact,
   Button,
-  Tilt,
 } from '../../components/base';
 import PropTypes from 'prop-types';
 import style from './Home.module.css';
@@ -50,7 +49,6 @@ const HomeView = ({
         <About text={about} />
       </section>
       <section data-aos="fade-up" data-aos-duration="1000" id="skills" className={style['skills-bg']}>
-        <Tilt positionDivider="top-right" />
         <div className={style['skills-container']}>
           <p data-aos="fade-left" className={style['skills-header']}>
             Skills
@@ -62,11 +60,9 @@ const HomeView = ({
           </Carousel>
         </div>
       </section>
-      <section id="education_experience" className={style['education-experience']}>
-        <Tilt positionDivider="top-right" colorType="grey" />
-        <Tilt positionDivider="bottom-left" colorType="grey" />
+      <section data-aos="fade-up" id="education_experience" className={style['education-experience']}>
         {/* <div className={style['education-experience-mask']} /> */}
-        <div data-aos="fade-up" className={style['education-experience-container']}>
+        <div className={style['education-experience-container']}>
           <p data-aos="fade-right" className={style['education-experience-header']}>
             Education & Experience
           </p>
@@ -97,8 +93,8 @@ const HomeView = ({
           </TimelineContainer>
         </div>
       </section>
-      <section id="project" className={style['project-bg']}>
-        <div data-aos="fade-up" className={style['project-container']}>
+      <section data-aos="fade-up" id="project" className={style['project-bg']}>
+        <div className={style['project-container']}>
           <p data-aos="fade-left" className={style['project-header']}>
             Projects
           </p>
