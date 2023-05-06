@@ -165,6 +165,17 @@ export async function getServerSideProps(context) {
       ],
       educationAndExperience: [
         {
+          institution: 'Papitupi Syariah',
+          position: 'Frontend Website Developer',
+          description:
+            '<p><strong>-</strong> Develop Signer Service to support multiple signer options, stamp and show qrcode<br><strong>- </strong>Develop and integrate Rest Api with Frontend Web Transactional Financing v2<br><strong>-</strong> Web Slicing and Rest Api Transactional Financing v1 Integration with React js and Tailwind css<br><strong>- </strong>Changing the appearance of the Lender web according to the design of the ui/ux using Bootstrap 4<br><strong>-</strong> Adding/integrating Signer Service on web Lender using PHP laravel<br><strong>-</strong> Create Signer Service with team using Express js and TypeScript<br><strong>-</strong> Developing a Web Backoffice for the purposes of cooperation between Bank Jago, Bank Permata and Alva Motor for electric motorbike financing products and employee benefits.</p>',
+          startDate: '2021-11-15T10:00:00.000Z',
+          endDate: '2021-11-15T10:00:00.000Z',
+          type: 'experience',
+          employmentType: 'Full-time',
+          currentJob: true,
+        },
+        {
           institution: 'Arkademy Tech Academy',
           startDate: '2021-06-23T17:00:00.000Z',
           position: 'Fullstack Website Developer',
@@ -174,6 +185,16 @@ export async function getServerSideProps(context) {
           type: 'education',
         },
         {
+          institution: 'PT Jasa Raharja',
+          position: 'Frontend Website Developer',
+          description:
+            '<p><strong>-</strong> Slicing the JRKU Mudik Frontend according to the design from ui/ux using React js and Bootstrap 5. Integrate the Rest Api and participate in the operation of the JRKU Mudik website for monitoring until the mudik flow is complete. The JRKU Mudik application is a mobile sub application from JRku - Jasa Raharja which is used to get free homecoming tickets by train or bus transportation along with the terms and conditions that apply.</p><p><strong>-</strong> Slicing Frontend JR SPI according to design from ui/ux using React js, Tailwind CSS.</p>',
+          startDate: '2020-12-15T10:00:00.000Z',
+          endDate: '2021-04-15T10:00:00.000Z',
+          type: 'experience',
+          employmentType: 'Freelance',
+        },
+        {
           institution: 'District Education Office Branch Trenggalek',
           position: 'Fullstack Website Developer',
           description:
@@ -181,6 +202,7 @@ export async function getServerSideProps(context) {
           startDate: '2020-11-10T17:00:00.000Z',
           endDate: '2020-12-15T10:00:00.000Z',
           type: 'experience',
+          employmentType: 'Freelance',
         },
         {
           institution: 'CV.Energeek',
@@ -190,6 +212,7 @@ export async function getServerSideProps(context) {
           startDate: '2020-01-14T17:00:00.000Z',
           endDate: '2020-06-10T10:00:00.000Z',
           type: 'experience',
+          employmentType: 'Full-time',
         },
         {
           institution: 'SMKN 2 Trenggalek',

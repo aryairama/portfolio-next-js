@@ -35,6 +35,20 @@ const Meta = () => {
           content="Arya Irama Wahono is a full stack web developer who always likes to experiment and never gives up."
         />
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="Arya Irama Wahono" />
+        <meta
+          name="keywords"
+          content="Arya, Irama, Wahono, Arya Irama, Arya Irama Wahono, React.js, Next.js, HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, Frontend Website Developer, Frontend Developer, TypeScript, Software Engineer, Software Developer"
+        />
+        <meta property="og:title" content="Arya Irama Wahono Profile Page" />
+        <meta
+          property="og:description"
+          content="Arya Irama Wahono is a full stack web developer who always likes to experiment and never gives up."
+        />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/73978824?v=4?s=400" />
+        <meta property="og:url" content="https://arya-irama-wahono.xyz" />
+        <meta property="og:site_name" content="Arya Irama wahono"></meta>
+        <meta property="og:type" content="profile"></meta>
         <title>Arya Irama Wahono</title>
       </Head>
     </>

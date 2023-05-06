@@ -77,6 +77,8 @@ const HomeView = ({
                     institution={value.institution}
                     description={value.description}
                     type={value.type}
+                    currentJob={value.currentJob}
+                    employmentType={value.employmentType}
                   />
                 ) : (
                   <RightTimeline
@@ -86,6 +88,8 @@ const HomeView = ({
                     institution={value.institution}
                     description={value.description}
                     type={value.type}
+                    currentJob={value.currentJob}
+                    employmentType={value.employmentType}
                   />
                 )}
               </React.Fragment>

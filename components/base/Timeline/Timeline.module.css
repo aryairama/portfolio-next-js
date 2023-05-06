@@ -65,8 +65,12 @@
   @apply font-semibold;
 }
 
+.timeline-content-employment-type {
+  @apply text-sm font-semibold;
+}
+
 .timeline-content-description {
-  @apply text-justify mb-2 text-sm;
+  @apply mb-2 text-sm;
 }
 
 .timeline-content-date {
