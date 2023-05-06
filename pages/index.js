@@ -162,6 +162,18 @@ export async function getServerSideProps(context) {
           title: 'Git',
           icon_class_name: 'devicon-git-plain colored',
         },
+        {
+          title: 'TypeScript',
+          icon_class_name: 'devicon-typescript-plain colored',
+        },
+        {
+          title: 'SQL Server',
+          icon_class_name: 'devicon-microsoftsqlserver-plain colored',
+        },
+        {
+          title: 'PostgreSQL',
+          icon_class_name: 'devicon-postgresql-plain colored',
+        },
       ],
       educationAndExperience: [
         {
@@ -241,6 +253,39 @@ export async function getServerSideProps(context) {
       ],
       projects: [
         {
+          image: '/assets/projects/pap.png',
+          title: 'Transactional Financing',
+          short_description:
+            'Transactional Financing is a product from Papitupi Syraiah to facilitate financial access needs for companies through Invoice financing. This platform provides financing of up to 2 billion rupiah with flexible financing repayment options, from 7 days to 90 days. ',
+          // Built using React js, Tailwind CSS, Express Js, TypeScript and SQL Server.
+          skill_and_package: ['React Js', 'Tailwind CSS', 'Redux', 'Express Js', 'TypeScript', 'SQL Server'],
+          type_url: 'external',
+          url: 'no-url',
+          preview: false,
+        },
+        {
+          image: '/assets/projects/spi.png',
+          title: 'JR SPI',
+          short_description:
+            'JR SPI is a monitoring dashboard for audit orders, audit results reports, monitoring results evaluation cards, follow-up monitoring, spin values, fraud status, inspection costs and quality assurance values, with an independent and integrated database.',
+          // Built using React js, Tailwind CSS, Laravel and PostgreSQL.
+          skill_and_package: ['React Js', 'Tailwind CSS', 'Laravel', 'PostgreSQL', 'Redux'],
+          type_url: 'external',
+          url: 'no-url',
+          preview: false,
+        },
+        {
+          image: '/assets/projects/jrku.png',
+          title: 'JRKU Mudik',
+          short_description:
+            'The JRKU Mudik application is a mobile sub application from JRku - Jasa Raharja which is used to get free homecoming tickets by train or bus transportation along with the terms and conditions that apply.',
+          // This application is built using React js, Bootstrap 5, Laravel, and PostgreSQL.
+          skill_and_package: ['React Js', 'Bootstrap 5', 'Laravel', 'PostgreSQL', 'Redux'],
+          type_url: 'external',
+          url: 'no-url',
+          preview: false,
+        },
+        {
           image: '/assets/projects/tokoku.png',
           title: 'TokoKu',
           short_description: 'Fashion e-commerce that supports multi-seller.',
@@ -291,7 +336,7 @@ export async function getServerSideProps(context) {
           short_description: 'Application for recording and monitoring alumni of all vocational schools in Trenggalek.',
           skill_and_package: ['Laravel 6', 'Bootstrap 4', 'Mysql'],
           type_url: 'external',
-          url: 'https://github.com/aryairama/SIMBKK',
+          url: 'no-url',
           preview: false,
         },
       ],
