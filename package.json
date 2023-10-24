@@ -16,7 +16,7 @@
     "detect-browser": "^5.2.1",
     "devicon": "^2.14.0",
     "moment": "^2.29.1",
-    "next": "11.1.2",
+    "next": "13.5.0",
     "next-redux-cookie-wrapper": "^2.1.0",
     "next-redux-wrapper": "^7.0.5",
     "react": "17.0.2",
